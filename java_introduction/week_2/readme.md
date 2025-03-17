@@ -50,3 +50,24 @@ int -> long -> double
 스코프라는 개념을 만든 이유
 - 비효율적인 메모리 사용 : 조건문이나 반복문에 잠깐 사용되고 버려지는 변수를 메인 코드 블록에 선언을 했을때 조건문이나 반복문이 종료가 되어도 변수가 존재하기 때문에 불필요한 메모리가 낭비된다. 만약 조건문이나 반복문 코드 블록 안에 변수를 선언한다면 종료가 되는 시점에서 임시로 사용되는 이 변수들은 제거가 된다. 따라서 불필요한 변수를 메모리에서 제거했기 때문에 조금 더 효율적으로 메모리를 사용할 수 있다.
 - 코드 복잡성 증가 : 좋은 코드는 군더더기 없는 단순한 코드이다. if문에서 잠깐 쓰고 버려질 변수를 메인 메서드에 선언을 하면 코딩이 끝날때까지 우리는 그 변수를 게속 염두하고 코드 작성을 해야된다 변수가 많아지면 그 만큼 생각을 해야되는 변수도 많아지기 때문에 상황에 따라 알맞게 변수를 선언하는것이 중요하다.
+
+
+## Scanner
+
+Scanner scanner(이름은 바꿀 수 있음) = new Scanner(System.in);
+
+예시)
+
+        System.out.print("문자열을 입력하세요 : ");
+        String str = scanner.nextLine(); // 입력을 String으로 가져온다.
+        System.out.println("입력한 문자열 : " + str);
+
+        System.out.print("정수를 입력하세요 : ");
+        int intValue = scanner.nextInt();   // 입력을 int로 가져온다.
+        System.out.println("입력한 정수 : " + intValue);
+
+        System.out.print("정수를 입력하세요 : ");
+        double doubleValue = scanner.nextDouble();  // 입력을 double로 가져온다.
+        System.out.println("입력한 실수 :  " + doubleValue);
+
+* 참고로 nextLine();를 제외한 나머지는 scanner로 입력을 받고 enter를 누르면 \n(개행문자)를 무시하고 넘긴다. 이때 버퍼에는 \n(개행문자)가 남아 있는데 다음에 nextLine();을 사용하면 버퍼에 남아있던 \n(개행문자)를 enter로 인식하고 사용자가 입력한 값을 안받고 넘어가버린다. 그래서 (next, nextInt)를 사용하고 다음에 바로 nextLine();을 사용해서 버퍼에 남아있는 개행문자를 처리해줘야한다.
