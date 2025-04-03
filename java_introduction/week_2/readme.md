@@ -131,6 +131,9 @@ Scanner scanner(이름은 바꿀 수 있음) = new Scanner(System.in);
 - 자바에서는 함수를 메서드(Method)라 한다 메서드도 함수의 한 종류라고 생각하면 된다.
 
 public static int add(int a, int b) {
-System.out.println(a + "+" + b + " 연산 수행"); int sum = a + b;
-return sum;
+        System.out.println(a + " + " + b + " 연산 수행을 합니다.");
+        int sum = a + b;
+        return sum;
     }
+
+
