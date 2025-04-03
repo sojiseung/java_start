@@ -126,4 +126,11 @@ Scanner scanner(이름은 바꿀 수 있음) = new Scanner(System.in);
 - 기본형은 사용할 값을 직접 저장한다. 반면에 참조형은 메모리에 저장된 배열이나 객체의 참조를 저장한다. 이로인해 참조형은 더 복잡한 데이터 구조를 만들고 관리할 수 있다. 반면 기본형응 더 빠르고 메모리를 효율적으로 처리한다.
 
 
+## 메서드
 
+- 자바에서는 함수를 메서드(Method)라 한다 메서드도 함수의 한 종류라고 생각하면 된다.
+
+public static int add(int a, int b) {
+System.out.println(a + "+" + b + " 연산 수행"); int sum = a + b;
+return sum;
+    }
